@@ -22,7 +22,7 @@ def test_swap_rows_neg_index():
 
     swap_rows(A, 0, -1)
 
-    pytest.approx([0, 0, 3], A.sum(axis=1), abs=ATOL)
+    assert np.isclose(A.sum(axis=1), [0, 0, 3], atol=ATOL).all()
 
 
 def test_swap_rows_1():
@@ -31,7 +31,7 @@ def test_swap_rows_1():
 
     swap_rows(A, 0, 1)
 
-    pytest.approx([0, 3, 0], A.sum(axis=1), abs=ATOL)
+    assert np.isclose(A.sum(axis=1), [0, 3, 0], atol=ATOL).all()
 
 
 def test_shape_2d():
