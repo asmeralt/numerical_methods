@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from src.lab2.zeidel_method import zeidel_method, zeidel_simple_method
+from src.lab2.zeidel_method import zeidel_method
 
 ATOL = 10**-2
 
