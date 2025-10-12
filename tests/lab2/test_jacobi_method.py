@@ -49,3 +49,14 @@ def test_1():
     sol_np = np.linalg.solve(A, b)
 
     assert np.isclose(np.linalg.norm(sol - sol_np), 0.0, atol=ATOL)
+
+
+def test_1_maxerror():
+    A = np.asarray([[5, 2, 3], [-1, -5, 4], [1, 2, -3]], dtype=np.float32)
+    A = np.divide(A, 10000)
+    b = np.asarray([1, 1, 1], dtype=np.float32)
+
+    sol = jacobi_method(A, b)
+    sol_np = np.linalg.solve(A, b)
+
+    assert np.linalg.norm(sol - sol_np) < 110.1

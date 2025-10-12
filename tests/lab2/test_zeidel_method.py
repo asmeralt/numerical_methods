@@ -59,4 +59,4 @@ def test_1_maxerror():
     sol = zeidel_method(A, b)
     sol_np = np.linalg.solve(A, b)
 
-    assert np.linalg.norm(sol - sol_np) < 0.457
+    assert np.linalg.norm(sol - sol_np) < 0.45636
