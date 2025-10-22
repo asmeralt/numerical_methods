@@ -15,6 +15,12 @@
             "type": "debugpy",
             "request": "launch",
             "module": "src.lab2.main"
+        },
+        {
+            "name": "Lab3: Main",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.lab3.main"
         }
     ]
 }
